@@ -1,0 +1,10 @@
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\bin\Debug\Lab7Poo.exe.config
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\bin\Debug\Lab7Poo.exe
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\bin\Debug\Lab7Poo.pdb
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.csprojAssemblyReference.cache
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.Form1.resources
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.Properties.Resources.resources
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.csproj.GenerateResource.cache
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.csproj.CoreCompileInputs.cache
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.exe
+C:\Users\Matias Rojas\Desktop\laboratorio-07-MatiasRojasG\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.pdb
