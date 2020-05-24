@@ -44,9 +44,6 @@ namespace Lab7Poo
             }
         } //Boton Igual
 
-
-
-
         private void button13_Click(object sender, EventArgs e)
         {
             if (TxtResultado.TextLength>1)
@@ -85,6 +82,7 @@ namespace Lab7Poo
             }
             ban_but = false;
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (ban_num == true)
@@ -237,30 +235,72 @@ namespace Lab7Poo
         private void buttonResta_Click(object sender, EventArgs e)
         {
             operador = "-";
-            if (ban_but == false)
+            ban_num = true;
+
+            if (ban_ope)
             {
                 num1 = Double.Parse(TxtResultado.Text);
-                TxtResultado.Clear();
+                ban_ope = false;
+            }
+            else
+            {
+                if (ban_but == false)
+                {
+                    num2 = Double.Parse(TxtResultado.Text);
+                    f_switch(operador);
+                    num1 = Double.Parse(TxtResultado.Text);
+                    ban_num = true;
+                    ban_but = true;
+                }
+
             }
         }
 
         private void buttonMult_Click(object sender, EventArgs e)
         {
             operador = "*";
-            if (ban_but == false)
+            ban_num = true;
+
+            if (ban_ope)
             {
                 num1 = Double.Parse(TxtResultado.Text);
-                TxtResultado.Clear();
+                ban_ope = false;
+            }
+            else
+            {
+                if (ban_but == false)
+                {
+                    num2 = Double.Parse(TxtResultado.Text);
+                    f_switch(operador);
+                    num1 = Double.Parse(TxtResultado.Text);
+                    ban_num = true;
+                    ban_but = true;
+                }
+
             }
         }
 
         private void buttonDiv_Click(object sender, EventArgs e)
         {
             operador = "/";
-            if (ban_but == false)
+            ban_num = true;
+
+            if (ban_ope)
             {
                 num1 = Double.Parse(TxtResultado.Text);
-                TxtResultado.Clear();
+                ban_ope = false;
+            }
+            else
+            {
+                if (ban_but == false)
+                {
+                    num2 = Double.Parse(TxtResultado.Text);
+                    f_switch(operador);
+                    num1 = Double.Parse(TxtResultado.Text);
+                    ban_num = true;
+                    ban_but = true;
+                }
+
             }
         }
 
@@ -302,8 +342,17 @@ namespace Lab7Poo
 
                     break;
                 case "/":
-                    Result = num1 / num2;
-                    break;
+                    if(num2!=0)
+                    {
+                        Result = num1 / num2;
+                        break;
+                    }
+                    else
+                    {
+                        Result = 0;
+                        break;
+                    }
+
             }
             TxtResultado.Text = Result.ToString();
             return Result;
