@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace Lab7Poo
         string operador;
         double Result;
         double num1, num2;
+        Boolean ban_but=true;
         public Form1()
         {
             InitializeComponent();
@@ -33,25 +35,29 @@ namespace Lab7Poo
             {
                 case "+":
                     Result = num1 + num2;
+                    
                     break;
                 case "-":
                     Result = num1 - num2;
+                    
                     break;
                 case "*":
                     Result = num1 * num2;
+                    
                     break;
                 case "/":
-                    try
+                    if(num2!=0)
                     {
                         Result = num1 / num2;
+                        
                         break;
                     }
-                    catch
+                    else
                     {
+                        Thread.Sleep(1000);
                         TxtResultado.Text = "Math ERROR";
                         break;
                     }
-
             }
             TxtResultado.Text = Result.ToString();
         }
@@ -66,88 +72,119 @@ namespace Lab7Poo
         private void button1_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "1";
+            ban_but = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "2";
+            ban_but = false;
         }
         private void button3_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "3";
+            ban_but = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "4";
+            ban_but = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "5";
+            ban_but = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "6";
+            ban_but = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "7";
+            ban_but = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "8";
+            ban_but = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "9";
+            ban_but = false;
         }
 
         private void button0_Click(object sender, EventArgs e)
         {
             TxtResultado.Text += "0";
+            ban_but = false;
         }
 
         private void buttonPunto_Click(object sender, EventArgs e)
         {
-            TxtResultado.Text += ".";
+            TxtResultado.Text += ",";
         }
 
         private void buttonSuma_Click(object sender, EventArgs e)
         {
             operador = "+";
-            num1 = Double.Parse(TxtResultado.Text);
-            TxtResultado.Clear();
+            if(ban_but==false)
+            {
+                num1 = Double.Parse(TxtResultado.Text);
+                TxtResultado.Clear();
+            }
         }
 
         private void buttonResta_Click(object sender, EventArgs e)
         {
             operador = "-";
-            num1 = Double.Parse(TxtResultado.Text);
-            TxtResultado.Clear();
+            if (ban_but == false)
+            {
+                num1 = Double.Parse(TxtResultado.Text);
+                TxtResultado.Clear();
+            }
         }
 
         private void buttonMult_Click(object sender, EventArgs e)
         {
             operador = "*";
-            num1 = Double.Parse(TxtResultado.Text);
-            TxtResultado.Clear();
+            if (ban_but == false)
+            {
+                num1 = Double.Parse(TxtResultado.Text);
+                TxtResultado.Clear();
+            }
         }
 
         private void buttonDiv_Click(object sender, EventArgs e)
         {
             operador = "/";
-            num1 = Double.Parse(TxtResultado.Text);
-            TxtResultado.Clear();
+            if (ban_but == false)
+            {
+                num1 = Double.Parse(TxtResultado.Text);
+                TxtResultado.Clear();
+            }
         }
 
         private void TxtResultado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonAns_Click(object sender, EventArgs e)
+        {
+            operador = "ans";
+            if (ban_but == false)
+            {
+                TxtResultado.Text=Result.ToString();
+            }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
