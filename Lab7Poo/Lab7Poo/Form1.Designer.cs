@@ -242,7 +242,7 @@
             this.TxtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtResultado.Location = new System.Drawing.Point(12, 12);
             this.TxtResultado.Name = "TxtResultado";
-            this.TxtResultado.Size = new System.Drawing.Size(260, 45);
+            this.TxtResultado.Size = new System.Drawing.Size(269, 45);
             this.TxtResultado.TabIndex = 17;
             this.TxtResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TxtResultado.TextChanged += new System.EventHandler(this.TxtResultado_TextChanged);
